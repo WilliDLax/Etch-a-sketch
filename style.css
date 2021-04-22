@@ -3,10 +3,15 @@ body{
     padding:0;
 }
 
+:root{
+    --size: 16;
+    --cell-size: calc(500px/var(var(--size)));
+}
+
 #container{
     display:grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(var(--size), 1fr);
+    grid-template-rows: repeat(var(--size), 1fr);
     outline: 2px solid black;
     position:relative;
     padding:0;
@@ -17,7 +22,17 @@ body{
 }
 
 .cell{
-    width: 31.25px;
-    height: 31.25px;
+    width: var(--cell-size);
+    height: var(--cell-size);
     outline: .5px solid black;
+}
+
+.hovered{
+    background-color: cyan;
+}
+
+button{
+    position:relative;
+    left:45%;
+    top: 5vh;
 }
