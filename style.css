@@ -1,4 +1,5 @@
 body{
+    background-color: rgb(48, 44, 44);
     margin:0;
     padding:0;
 }
@@ -9,6 +10,7 @@ body{
 }
 
 #container{
+    background-color: darkgray;
     display:grid;
     grid-template-columns: repeat(var(--size), 1fr);
     grid-template-rows: repeat(var(--size), 1fr);
