@@ -14,7 +14,8 @@ for (let i = 0; i < 16; i++){
 
 //changes color when mouse hovers
 function changeColor(e){
-    this.classList.add("hovered");
+    let random = "#" + Math.floor(Math.random()*16777215).toString(16);
+    this.style.backgroundColor = random;
 }
 
 //makes a new grid using the parameters as dimensions
